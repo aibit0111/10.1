@@ -1,0 +1,1 @@
+var http = require('http');http.createServer(function(req,res){    res.writeHead(200);    res.write("hello");    res.end();}).listen(909);function palindrome(num){    var str = num.toString();    if(str.length === 0) { return true;}    if (str[0] !== str[str.length-1]){return false;}    return palindrome(str.slice(1,str.length-1));};console.log(palindrome(909));
